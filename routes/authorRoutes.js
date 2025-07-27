@@ -1,6 +1,5 @@
 const { Router } = require("express");
 const { getAuthor, getAllAuthors, getAuthorForm, postAuthorForm, deleteAuthor } = require("../controllers/authorController");
-const { deleteBook } = require("../controllers/bookController");
 const authorRouter = Router()
 
 authorRouter.get("/", getAllAuthors);
