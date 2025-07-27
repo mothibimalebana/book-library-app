@@ -1,10 +1,11 @@
 const { Router } = require("express")
+const { getBook, getBooks, getBookForm, postBookForm } = require("../controllers/bookController")
 const bookRouter = Router()
 
+bookRouter.get("/", getBooks);
+bookRouter.get("/create", getBookForm);
+bookRouter.post("/create", postBookForm);
+bookRouter.get("/:id", getBook);
 
-bookRouter.get("/", (req, res) => {
-    console.log("get all books")
-    res.send("all books displayed here***")
-})
 
 module.exports = bookRouter
