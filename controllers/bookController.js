@@ -19,4 +19,5 @@ module.exports = {
     getBook,
     getBookForm,
     postBookForm,
+    deleteBook,
 }
