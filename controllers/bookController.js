@@ -1,5 +1,9 @@
+const db = require('../db/queries')
+
 const getBooks = async (req, res) => {
-    res.send("Display all books from database")
+    const books = await db.getAllBooks();
+    console.log("books: ", books);
+    res.send("Book: " + books.map((book) => book.title));
 }
 const getBook = async (req, res) => {
     res.send("Display single book page")

@@ -2,6 +2,7 @@ const pool = require("./pool");
 
 async function getAllBooks() {
     const { rows } = await pool.query("SELECT * FROM books");
+    console.log(rows)
     return rows;
 }
 
