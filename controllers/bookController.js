@@ -6,7 +6,10 @@ const getBooks = async (req, res) => {
     res.send("Book: " + books.map((book) => book.title));
 }
 const getBook = async (req, res) => {
-    res.send("Display single book page")
+    const { bookId } = req.params;
+    const book = await db.getBook(bookId);
+    console.log("Book ", book);
+    res.send("Book title: " + book.map((bookInfo) => bookInfo.title));
 }
 const getBookForm = (req, res) => {
     res.send("Form will be displayed here")

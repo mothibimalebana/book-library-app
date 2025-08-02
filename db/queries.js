@@ -7,8 +7,8 @@ async function getAllBooks() {
 }
 
 async function getBook(bookId) {
-    const { book } = await pool.query(`SELECT * FROM books WHERE id = $1`,[bookId])
-    return book;
+    const { rows } = await pool.query(`SELECT * FROM books WHERE book_id = $1`,[bookId])
+    return rows;
 }
 
 async function insertBook(book) {

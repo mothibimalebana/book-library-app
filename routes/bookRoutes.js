@@ -5,7 +5,7 @@ const bookRouter = Router()
 bookRouter.get("/", getBooks);
 bookRouter.get("/create", getBookForm);
 bookRouter.post("/create", postBookForm);
-bookRouter.get("/:id", getBook);
-bookRouter.delete("/:id", deleteBook);
+bookRouter.get("/:bookId", getBook);
+bookRouter.delete("/:bookId", deleteBook);
 
 module.exports = bookRouter
